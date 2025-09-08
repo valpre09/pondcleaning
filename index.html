@@ -1,108 +1,642 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Professional pond cleaning in Johannesburg North with Oase PondoVac 4. Expert pond vacuum services for pristine water.">
-  <meta name="keywords" content="pond cleaning, pond vacuum, Johannesburg North, Oase PondoVac 4, pond maintenance">
-  <meta name="author" content="Pond Cleaning Jhb North">
-  <title>Pond Cleaning Jhb North - Minimalist Pond Care</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    .ripple {
-      animation: ripple 4s infinite;
-    }
-    @keyframes ripple {
-      0% { transform: scale(1); opacity: 0.3; }
-      50% { transform: scale(1.1); opacity: 0.1; }
-      100% { transform: scale(1); opacity: 0.3; }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PondCleaning Johannesburg North | Professional Pond Vacuum Services</title>
+    <style>
+        /* Global Styles */
+        :root {
+            --primary: #2a7a5c;
+            --secondary: #3ab187;
+            --accent: #f8c300;
+            --light: #f5f5f5;
+            --dark: #333;
+            --gray: #6c757d;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: #f9f9f9;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: var(--secondary);
+            transform: translateY(-2px);
+        }
+        
+        .section {
+            padding: 60px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--primary);
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            color: var(--gray);
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        .logo span {
+            color: var(--secondary);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600"><rect width="1200" height="600" fill="%232a7a5c"/><text x="50%" y="50%" font-family="Arial" font-size="50" fill="%23ffffff" text-anchor="middle">Pond Cleaning Services</text></svg>');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .service-img {
+            height: 200px;
+            background-color: var(--secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        }
+        
+        .service-content {
+            padding: 20px;
+        }
+        
+        .service-content h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        /* About Section */
+        .about {
+            background-color: var(--light);
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .about-text h2 {
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .about-features {
+            margin-top: 20px;
+        }
+        
+        .feature {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .feature-icon {
+            background-color: var(--primary);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+        }
+        
+        /* Service Area Section */
+        .area-content {
+            text-align: center;
+        }
+        
+        .suburbs {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        
+        .suburb {
+            background-color: var(--primary);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-weight: 500;
+        }
+        
+        /* Equipment Section */
+        .equipment-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .specs {
+            margin-top: 20px;
+        }
+        
+        .spec {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .spec:last-child {
+            border-bottom: none;
+        }
+        
+        /* CTA Section */
+        .cta {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            text-align: center;
+            padding: 80px 0;
+        }
+        
+        .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .cta p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+        
+        .footer-column h3 {
+            color: var(--accent);
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+        
+        .footer-column p, .footer-column li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-column a:hover {
+            color: var(--accent);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--primary);
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .about-content, .equipment-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background-color: white;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.3s ease;
+            }
+            
+            .nav-links.active {
+                left: 0;
+            }
+            
+            .nav-links li {
+                margin: 15px 0;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
-<body class="bg-beige-100 font-sans">
-  <!-- Header -->
-  <header class="bg-white shadow py-4 fixed w-full top-0 z-10">
-    <div class="container mx-auto px-4 flex justify-between items-center">
-      <h1 class="text-2xl font-light">Pond Cleaning Jhb North</h1>
-      <nav>
-        <ul class="flex space-x-6">
-          <li><a href="#home" class="hover:text-gray-600">Home</a></li>
-          <li><a href="#services" class="hover:text-gray-600">Services</a></li>
-          <li><a href="#about" class="hover:text-gray-600">About</a></li>
-          <li><a href="#contact" class="hover:text-gray-600">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <!-- Hero Section -->
-  <section id="home" class="pt-20 flex items-center min-h-screen">
-    <div class="container mx-auto px-4 text-center">
-      <div class="relative inline-block mb-6">
-        <img src="https://via.placeholder.com/600x300?text=Tranquil+Pond" alt="Clean pond" class="rounded-lg">
-        <div class="absolute inset-0 rounded-lg bg-beige-200 opacity-20 ripple"></div>
-      </div>
-      <h2 class="text-3xl font-light">Pristine Ponds, Made Simple</h2>
-      <p class="text-lg mt-4 max-w-md mx-auto">Expert pond cleaning in Johannesburg North using the Oase PondoVac 4, up to 2.4m deep.</p>
-      <a href="#contact" class="mt-6 inline-block bg-gray-800 text-white py-2 px-6 rounded hover:bg-gray-700">Get a Quote</a>
-    </div>
-  </section>
-
-  <!-- Services Section -->
-  <section id="services" class="py-16 bg-white">
-    <div class="container mx-auto px-4">
-      <h2 class="text-2xl font-light text-center mb-8">Our Services</h2>
-      <div class="flex flex-col space-y-6 max-w-2xl mx-auto">
-        <div>
-          <h3 class="text-xl font-medium">Pond Vacuuming</h3>
-          <p>Remove sludge and debris with the Oase PondoVac 4, ideal for ponds up to 2.4m deep.</p>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">Pond<span>Cleaning</span>.co.za</a>
+                <div class="menu-toggle">☰</div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#area">Service Area</a></li>
+                    <li><a href="#equipment">Equipment</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-        <div>
-          <h3 class="text-xl font-medium">Water Clarity</h3>
-          <p>Ensure a healthy pond ecosystem with professional cleaning.</p>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Professional Pond Cleaning Services in Johannesburg North</h1>
+                <p>Expert cleaning and maintenance for pristine, healthy ponds using the advanced Pondovac 4 system</p>
+                <a href="#contact" class="btn">Get a Free Quote</a>
+            </div>
         </div>
-        <div>
-          <h3 class="text-xl font-medium">Koi Pond Care</h3>
-          <p>Gentle cleaning to keep your koi ponds vibrant.</p>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services</h2>
+                <p>Comprehensive pond care solutions for homeowners in Johannesburg North</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-img">💧</div>
+                    <div class="service-content">
+                        <h3>Pond Vacuuming</h3>
+                        <p>Thorough sludge and debris removal using our professional Pondovac 4 system without harming your aquatic ecosystem.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-img">🌿</div>
+                    <div class="service-content">
+                        <h3>Weed Removal</h3>
+                        <p>Safe and effective removal of unwanted vegetation to keep your pond clean and balanced.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-img">🔧</div>
+                    <div class="service-content">
+                        <h3>Equipment Maintenance</h3>
+                        <p>Professional cleaning and maintenance of pumps, filters, and other pond equipment.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- About Section -->
-  <section id="about" class="py-16 bg-beige-50">
-    <div class="container mx-auto px-4 text-center">
-      <h2 class="text-2xl font-light mb-6">About Us</h2>
-      <p class="text-lg max-w-md mx-auto">Pond Cleaning Jhb North brings clarity to your pond with the Oase PondoVac 4. We’re dedicated to simple, effective pond care in Johannesburg North.</p>
-    </div>
-  </section>
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Why Choose Our Pond Cleaning Services?</h2>
+                    <p>With years of experience and state-of-the-art equipment, we provide the most thorough and efficient pond cleaning services in Johannesburg North. Our specialized Pondovac 4 system allows us to clean your pond with minimal water loss and maximum results.</p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <div class="feature-icon">✓</div>
+                            <div>Professional-grade equipment</div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">✓</div>
+                            <div>Eco-friendly cleaning solutions</div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">✓</div>
+                            <div>Expert technicians</div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">✓</div>
+                            <div>Affordable pricing</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-img">
+                    <div style="background-color: #3ab187; height: 300px; display: flex; align-items: center; justify-content: center; color: white; border-radius: 10px; font-size: 1.5rem;">
+                        Pond Cleaning Image
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="py-16">
-    <div class="container mx-auto px-4 text-center">
-      <h2 class="text-2xl font-light mb-6">Contact Us</h2>
-      <p class="text-lg mb-4">📞 <a href="tel:+27123456789">+27 12 345 6789</a></p>
-      <p class="text-lg mb-4">📧 <a href="mailto:info@pondcleaning.co.za">info@pondcleaning.co.za</a></p>
-      <p class="text-lg">Serving Johannesburg North with simplicity.</p>
-    </div>
-  </section>
+    <!-- Service Area Section -->
+    <section class="section" id="area">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Service Area</h2>
+                <p>We proudly serve the following areas in Johannesburg North</p>
+            </div>
+            <div class="area-content">
+                <div class="suburbs">
+                    <div class="suburb">Sandton</div>
+                    <div class="suburb">Fourways</div>
+                    <div class="suburb">Randburg</div>
+                    <div class="suburb">Rosebank</div>
+                    <div class="suburb">Parkhurst</div>
+                    <div class="suburb">Parktown</div>
+                    <div class="suburb">Bryanston</div>
+                    <div class="suburb">Craighall</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Footer -->
-  <footer class="bg-white py-4">
-    <div class="container mx-auto px-4 text-center">
-      <p class="text-sm">&copy; 2025 Pond Cleaning Jhb North. All rights reserved.</p>
-    </div>
-  </footer>
+    <!-- Equipment Section -->
+    <section class="section" id="equipment">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Equipment</h2>
+                <p>We use the professional-grade Pondovac 4 for efficient pond cleaning</p>
+            </div>
+            <div class="equipment-content">
+                <div class="equipment-img">
+                    <div style="background-color: #2a7a5c; height: 300px; display: flex; align-items: center; justify-content: center; color: white; border-radius: 10px; font-size: 1.5rem;">
+                        Pondovac 4 Image
+                    </div>
+                </div>
+                <div class="equipment-info">
+                    <h3>Pondovac 4 Specifications</h3>
+                    <p>The Pondovac 4 is a professional pond vacuum designed for efficient cleaning of medium to large ponds with the following capabilities:</p>
+                    <div class="specs">
+                        <div class="spec">
+                            <h4>Maximum Depth</h4>
+                            <p>2 meters (6.5 feet)</p>
+                        </div>
+                        <div class="spec">
+                            <h4>Tank Capacity</h4>
+                            <p>30 liters (8 gallons)</p>
+                        </div>
+                        <div class="spec">
+                            <h4>Suction Power</h4>
+                            <p>1600W motor for powerful suction</p>
+                        </div>
+                        <div class="spec">
+                            <h4>Water Usage</h4>
+                            <p>Minimal water loss during cleaning</p>
+                        </div>
+                    </div>
+                    <p class="notice"><strong>Note:</strong> Our Pondovac 4 is ideal for ponds up to 2 meters deep. For deeper ponds, please contact us for alternative solutions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <script>
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
+    <!-- CTA Section -->
+    <section class="cta" id="contact">
+        <div class="container">
+            <h2>Ready for a Cleaner, Healthier Pond?</h2>
+            <p>Contact us today for a free quote and consultation. Our team is ready to transform your pond into a beautiful, clean water feature.</p>
+            <a href="#contact-form" class="btn">Get in Touch</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>PondCleaning.co.za</h3>
+                    <p>Professional pond vacuum services specializing in Johannesburg North areas. We use the advanced Pondovac 4 system for efficient and thorough cleaning.</p>
+                    <div class="social-links">
+                        <a href="#">FB</a>
+                        <a href="#">IG</a>
+                        <a href="#">TW</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#area">Service Area</a></li>
+                        <li><a href="#equipment">Equipment</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <p>Email: info@pondcleaning.co.za</p>
+                    <p>Phone: +27 11 234 5678</p>
+                    <p>Hours: Mon-Sat 8:00 AM - 6:00 PM</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 PondCleaning.co.za. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
         });
-      });
-    });
-  </script>
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    document.querySelector('.nav-links').classList.remove('active');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
